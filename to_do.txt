@@ -1,0 +1,57 @@
+SQL:
+- deixar dados mais bonitos (acentos, capitalizacao, etc) 
+- Juntar instituições (aparece 2 vezes, uma com uf e outra null, pais igual)
+NOMES:
+- pegar paises dos nomes que nao foram classificados 25
+- pegar paises das regiões que nao foram classificados 15
+DETALHES:
+- remover numero_identificador (por privacidade)
+FRONT:
+- Fazer front-end
+
+ANALISES:
+(1ª parte - Somente numeros totais)
+Total de curriculos
+Mestrado/Doutorado
+Com Bolsa/Sem Bolsa
+Distribuicao por Genero
+Distribuicao por UF
+Status dos cursos
+Distribuicao por Grande Area
+Distribuicao por Area
+(2ª parte - Por ano)
+Crescimento de conclusões por ano
+Crescimento de bolsas por ano
+(3ª parte - Analise estatistica Pandemia)
+Impacto da pandemia na conclusao dos cursos
+Impacto da pandemia na concessao de bolsas
+Impacto da pandemia por genero
+Impacto da pandemia por UF
+Impacto da pandemia por Grande Area
+Impacto da pandemia por Area
+Impacto da pandemia por tipo de formacao
+Regressão linear dos dados para ver tendencia e impacto da pandemia
+Interrompidos durante a pandemia
+Levar em consideranção o ano de 2020 como um ano atípico (metade do ano com pandemia)
+Levar em consideração que os dados de 2023 estão incompletos
+Levar em consideração data_atualizacao para ver se o currículo está atualizado
+
+
+
+FEITOS:
+- renomear colunas para consistência: 10
+grande_area_definitivo -> grande_area ✅
+area_definitivo -> area ✅
+instituicao_uf -> uf_instituicao ✅
+instituicao_regiao -> regiao_instituicao ✅
+instituicao_pais -> pais_instituicao ✅
+- selecionar somente nessa ordem:10
+numero_identificador,genero,data_atualizacao,uf_nascimento,regiao_nascimento,pais_nascimento,tipo_formacao,status_curso
+ano_inicio,ano_conclusao,grande_area,area,flag_bolsa,uf_instituicao,regiao_instituicao,pais_instituicao ✅
+- remover colunas:
+cidade_nascimento ✅
+codigo_instituicao ✅
+codigo_curso ✅
+codigo_area_curso ✅
+- transformar flag_bolsa em booleano ✅
+- transformar status_curso em booleano (concluido ou nao)? ✅
