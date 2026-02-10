@@ -2,3 +2,8 @@
 .vscode/
 output_lattes/
 grupos.csv
+docker_db.session.sql
+docker-compose.yml
+Dockerfile
+README_DOCKER.md
+scripts/db_init.py
